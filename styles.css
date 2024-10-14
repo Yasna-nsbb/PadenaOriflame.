@@ -1,0 +1,3375 @@
+*{
+    margin: 0;
+    padding: 0; 
+
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(images/green2.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #90EE90;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+}
+.text-box h1{
+    font-size: 62px;
+    
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 16px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:#fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    
+}
+.hero-btn:hover{
+    border: 1px solid rgba(144,238,144,0.5);
+    background: rgba(144,238,144,0.5);
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links
+    {
+        position: fixed;
+        background: #90EE90;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color:#fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul
+    {
+        padding: 30px; 
+    }
+    
+}
+/*---------information--------*/
+.info{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+h1{
+    font-size: 38px;
+    font-weight: 600;
+}
+.info p{
+    color: #777;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.info-col{
+    flex-basis: 31%;
+    background: rgba(144,238,144,0.5);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    
+}
+.info-col p{
+    font-size: 19px;
+}
+.info-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2)
+    
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+/*-----------new products and prices--------*/
+.news{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.news p{
+    font-size: 20px;
+}
+.news-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.news-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.news-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 19px;
+}
+.news-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;  
+    transition: 0.5s;
+}
+.layer:hover{
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #FFFFFF;
+    font-size: 20px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute; 
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+/*------------bestoffers-----------*/
+.bestoffers{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.bestoffers p{
+    font-size: 20px;
+}
+.bestoffers-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.bestoffers-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.bestoffers-col p{
+    padding: 0;
+    text-align: center;
+    
+}
+.bestoffers-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------testimonials--------*/
+.testimonials{
+    width: 75%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+    
+}
+.testimonials p{
+    font-size: 20px;
+}
+.testimonial-col{
+    flex-basis: 35%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: rgba(144,238,144,0.5);
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonial-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+.testimonial-col p{
+    padding: 0;
+}
+.testimonial-col h3{
+    margin-top: 15px;
+    text-align: center;
+}
+.testimonial-col .fa{
+    color: 90EE90;
+}
+/*------call to action-----*/
+.cta{
+    margin: 100px auto;
+    width: 88%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/flower.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+     
+}
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;   
+}
+@media(max-width:700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+/*------footer-----*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    
+}
+.footer h4{
+    margin-bottom: 28px;
+    margin-top: 70px;
+    font-weight: 600;
+}
+.footer p{
+    font-size: 15px;
+}
+.icons .fa{
+    color: #90EE90;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    
+}
+/*---------About us page--------*/
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: repeating-linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(images/greenn.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color:#fff;
+}
+.sub-header h1{
+    margin-top: 70px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1{
+    padding-top: 0;
+}
+.about-col p{
+    padding: 15px 0 25px;
+    text-align: justify;
+    font-size: 17px;
+}
+.green-btn{
+    border: 1px solid #008000;
+    background: transparent;
+    color: #008000;
+}
+.green-btn:hover{
+    color:#000000;
+}
+/*--------brands-------*/
+.brands{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+.brand-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.brand-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+    border-radius: 50%;
+}
+.brand-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*--------Brands second-------*/
+.Brands{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.Brand-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.Brand-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+    border-radius: 50%;
+}
+.Brand-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*--------Brands third-------*/
+.Brandss{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.Brands-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.Brands-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+    border-radius: 50%;
+}
+.Brands-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*--------Brands fourth-------*/
+.Brandsss{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.Brandss-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.Brandss-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+    border-radius: 50%;
+}
+.Brandss-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*--------Brands fifth-------*/
+.Brandssss{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.Brandsss-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.Brandsss-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+    border-radius: 50%;
+}
+.Brandsss-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*--------Brands sixth-------*/
+.Brandsssss{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.Brandssss-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.Brandssss-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+    border-radius: 50%;
+}
+.Brandssss-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/*--------why oriflame-------*/
+.subb-header{
+    height: 60vh;
+    width: 100%;
+    background-image: repeating-linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(images/greenn.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color:#fff;
+}
+.text-box{
+    padding-top: 160px;
+}
+.subb-header h1{
+    margin-bottom: 350px;
+    font-size: 40px;
+}
+.why-oriflame{
+    width: 80%;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 50px;
+    padding-right: 100px;
+    
+}
+.why-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.why-col img{
+    width: 65%;
+    padding-left: 170px;
+}
+.why-coll img{
+    width: 100%;
+    padding-left: 100px;
+    padding-top: 80px;
+}
+.why-colll img{
+    width: 100%;
+    padding-left: 100px;
+    padding-top: 45px;
+}
+.why-col h1{
+    padding-top: 30px;
+}
+.why-col p{
+    padding: 15px 0 25px;
+    font-size: 15px;
+    text-align: justify;
+    font-size: 17px;
+}
+/*--------FAQ-------*/
+.FAQ{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.FAQ-col{
+    flex-basis: 31%;
+    background: rgba(144,238,144,0.2);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    
+}
+.FAQ-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2)
+    
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+/*--------faq-------*/
+.faq{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.roow{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.faq-col{
+    flex-basis: 31%;
+    background: rgba(144,238,144,0.2);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    
+}
+.faq-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2)
+    
+}
+@media(max-width: 700px){
+    .roow{
+        flex-direction: column;
+    }
+}
+/*--------faqq-------*/
+.faqq{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.rooow{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.faqq-col{
+    flex-basis: 31%;
+    background: rgba(144,238,144,0.2);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    
+}
+.faqq-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2)
+    
+}
+@media(max-width: 700px){
+    .rooow{
+        flex-direction: column;
+    }
+}
+/*-------contact us page-------*/
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.location iframe{
+    width: 100%;
+    
+}
+.contact-us{
+ width: 80%;
+    margin: auto;
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div .fa{
+    font-size: 28px;
+    color: #90EE90;
+    margin: 10px;
+    margin-right:30px; 
+}
+.contact-col div p{
+    padding: 0;
+    
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+.contact-col input, .contact-col textarea{
+    width:100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/*---------Products--------*/
+.products{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.products p{
+    color: #777;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.kidsproducts-col{
+    flex-basis: 31%;
+    background: rgba(135,206,235,0.3);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.womenproducts-col{
+    flex-basis: 31%;
+    background: rgba(255,127,127,0.3);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.menproducts-col{
+    flex-basis: 31%;
+    background: rgba(0,128,0,0.4);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #000000;
+    
+}
+.products-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2)
+    
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*-----------women products--------*/
+.sub-headerr{
+    height:40vh;
+    width: 100%;
+    background-image: repeating-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url(images/everyone.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color:#fff;
+}
+.women{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.women-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.women-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.women-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.women-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------women1 products--------*/
+.women1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.women1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.women1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.women1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.women1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------women2 products--------*/
+.women2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.women2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.women2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.women2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.women2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------women3 products--------*/
+.women3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.women3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.women3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.women3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.women3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+/*-----------women menu--------*/
+.women p{
+    font-size: 17px;
+}
+.products-menu{
+}
+navv{
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+}
+ 
+.navv-links{
+    flex: 1;
+    text-align: center;
+}
+.navv-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.navv-links ul li a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+}
+.navv-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #90EE90;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    
+}
+.navv-links ul li:hover::after{
+    width: 100%;
+}
+
+/*-----------men products--------*/
+.men-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/cover%20men%206.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.men{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.men-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.men-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.men-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.men-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------men1 products--------*/
+.men1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.men1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.men1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.men1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.men1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------men2 products--------*/
+.men2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.men2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.men2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.men2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.men2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------men3 products--------*/
+.men3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.men3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.men3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.men3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.men3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+/*-----------men menu--------*/
+.productss-menu{
+}
+navvv{
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+}
+ 
+.navvv-links{
+    flex: 1;
+    text-align: center;
+}
+.navvv-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.navvv-links ul li a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+}
+.navvv-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #90EE90;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    
+}
+.navvv-links ul li:hover::after{
+    width: 100%;
+}
+
+/*-----------children and kids products--------*/
+.kidsandchildren-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/kids%20cover%201.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.kids{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.kids p{
+    font-size: 17px;
+}
+.kids-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.kids-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.kids-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.kids-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------kids1 products--------*/
+.kids1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.kids1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.kids1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.kids1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.kids1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------kids2 products--------*/
+.kids2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.kids2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.kids2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.kids2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.kids2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------kids3 products--------*/
+.kids3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.kids3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.kids3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.kids3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.kids3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+/*-----------kids menu--------*/
+.productsss-menu{
+}
+navvvv{
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+}
+ 
+.navvvv-links{
+    flex: 1;
+    text-align: center;
+}
+.navvvv-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.navvvv-links ul li a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+}
+.navvvv-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #90EE90;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    
+}
+.navvvv-links ul li:hover::after{
+    width: 100%;
+}
+/*---------sign in--------*/
+.sign-in{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.sign-in p{
+    color: #777;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.sign-in-col{
+    flex-basis: 31%;
+    background: rgba(144,238,144,0.3);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #000000;
+    
+}
+.sign-in-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2)
+    
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*---------log in--------*/
+.log-in{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.log-in p{
+    color: #777;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.roooow{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 400px;
+    
+}
+.log-in-col{
+    flex-basis: 31%;
+    background: rgba(144,238,144,0.3);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #000000;
+    
+}
+.log-in-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2)
+    
+}
+@media(max-width: 700px){
+    .roow{
+        flex-direction: column;
+    }
+}
+.log-in-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.log-in-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.log-in-col div .fa{
+    font-size: 28px;
+    color: #90EE90;
+    margin: 10px;
+    margin-right:30px; 
+}
+.log-in-col div p{
+    padding: 0;
+    
+}
+.log-in-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+.log-in-col input, .log-in-col textarea{
+    width:100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/*---------final sign in--------*/
+.final-in{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.final-in p{
+    color: #777;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.finalsignin{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 400px;
+    
+}
+.final-in-col{
+    flex-basis: 31%;
+    background: rgba(144,238,144,0.3);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #000000;
+    
+}
+.final-in-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2)
+    
+}
+@media(max-width: 700px){
+    .roow{
+        flex-direction: column;
+    }
+}
+.final-in-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.final-in-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.final-in-col div .fa{
+    font-size: 28px;
+    color: #90EE90;
+    margin: 10px;
+    margin-right:30px; 
+}
+.final-in-col div p{
+    padding: 0;
+    
+}
+.final-in-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+.final-in-col input, .final-in-col textarea{
+    width:100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/*-------women perfume-----*/
+.womenperfume-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/women%20perfume%20cover.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.womenperfume{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.womenperfume p{
+    font-size: 17px;
+}
+.womenperfume-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenperfume-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenperfume-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenperfume-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------women1 perfume products--------*/
+.womenperfume1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenperfume1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenperfume1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenperfume1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenperfume1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------women2 perfume products--------*/
+.womenperfume2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenperfume2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenperfume2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenperfume2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenperfume2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------women3 perfume products--------*/
+.womenperfume3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenperfume3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenperfume3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenperfume3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenperfume3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------women bodycare products--------*/
+.womenbodycare-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/wide%20range.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.womenbodycare{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.womenbodycare p{
+    font-size: 17px;
+}
+.womenbodycare-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenbodycare-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenbodycare-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenbodycare-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenbodycare1 products--------*/
+.womenbodycare1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenbodycare1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenbodycare1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenbodycare1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenbodycare1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenbodycare2 products--------*/
+.womenbodycare2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenbodycare2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenbodycare2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenbodycare2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenbodycare2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenbodycare3 products--------*/
+.womenbodycare3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenbodycare3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenbodycare3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenbodycare3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenbodycare3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------womenhealthydiet-----*/
+.womenhealthydiet-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/women%20healthy%20diet%20cover.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.womenhealthydiet{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.womenhealthydiet p{
+    font-size: 17px;    
+}
+.womenhealthydiet-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenhealthydiet-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenhealthydiet-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenhealthydiet-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenhealthydiet1 products--------*/
+.womenhealthydiet1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenhealthydiet1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenhealthydiet1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenhealthydiet1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenhealthydiet1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenhealthydiet2 perfume products--------*/
+.womenhealthydiet2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenhealthydiet2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenhealthydiet2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenhealthydiet2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenhealthydiet2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenhealthydiet3 perfume products--------*/
+.womenhealthydiet3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenhealthydiet3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenhealthydiet3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenhealthydiet3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenhealthydiet3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenhaircare products--------*/
+.womenhaircare-headerr{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/women%20hair%20care%20main%20cover.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.womenhaircare{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.womenhaircare p{
+    font-size: 17px;
+}
+.womenhaircare-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenhaircare-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenhaircare-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenhaircare-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenhaircare1 products--------*/
+.womenhaircare1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenhaircare1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenhaircare1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenhaircare1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenhaircare1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenhaircare2 products--------*/
+.womenhaircare2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenhaircare2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenhaircare2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenhaircare2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenhaircare2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenhaircare3 products--------*/
+.womenhaircare3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenhaircare3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenhaircare3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenhaircare3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenhaircare3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenfacecare products--------*/
+.womenfacecare-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/women%20face%20care.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.womenfacecare{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.womenfacecare p{
+font-size: 17px;
+}
+.womenfacecare-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenfacecare-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenfacecare-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenfacecare-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenfacecare1 products--------*/
+.womenfacecare1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenfacecare1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenfacecare1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenfacecare1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenfacecare1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenfacecare2 products--------*/
+.womenfacecare2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenfacecare2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenfacecare2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenfacecare2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenfacecare2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenfacecare3 products--------*/
+.womenfacecare3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenfacecare3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenfacecare3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenfacecare3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenfacecare3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------make up women-----*/
+.makeup-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/cover.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.womenmakeup{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.womenmakeup p{
+    font-size: 17px;
+}
+.womenmakeup-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenmakeup-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenmakeup-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenmakeup-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenmakeup1 products--------*/
+.womenmakeup1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenmakeup1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenmakeup1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenmakeup1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenmakeup1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenmakeup2 products--------*/
+.womenmakeup2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenmakeup2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenmakeup2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenmakeup2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenmakeup2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenmakeup3 products--------*/
+.womenmakeup3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenmakeup3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenmakeup3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenmakeup3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenmakeup3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------menperfume products-----*/
+.menperfume-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/cover%20men%204.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.menperfume{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.menperfume-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menperfume-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menperfume-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menperfume-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menperfume1 products--------*/
+.menperfume1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menperfume1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menperfume1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menperfume1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menperfume1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menperfume2 products--------*/
+.menperfume2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menperfume2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menperfume2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menperfume2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menperfume2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menperfume3 products--------*/
+.menperfume3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menperfume3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menperfume3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menperfume3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menperfume3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------womenaccessories-----*/
+.womenaccessories-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/women%20perfume%20cover.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.womenaccessories{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.womenaccessories p{
+    font-size: 17px;
+}
+.womenaccessories-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenaccessories-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenaccessories-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenaccessories-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenaccessories1  products--------*/
+.womenaccessories1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenaccessories1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenaccessories1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenaccessories1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenaccessories1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenaccessories2  products--------*/
+.womenaccessories2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenaccessories2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenaccessories2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenaccessories2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenaccessories2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------womenaccessories3  products--------*/
+.womenaccessories3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.womenaccessories3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.womenaccessories3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.womenaccessories3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.womenaccessories3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------menbodycare products-----*/
+.menbodycare-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/cover%203%20men.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.menbodycare{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.menbodycare-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menbodycare-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menbodycare-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menbodycare-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menbodycare1 products--------*/
+.menbodycare1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menbodycare1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menbodycare1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menbodycare1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menbodycare1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menbodycare2 products--------*/
+.menbodycare2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menbodycare2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menbodycare2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menbodycare2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menbodycare2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menbodycare3 products--------*/
+.menbodycare3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menbodycare3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menbodycare3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menbodycare3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menbodycare3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------menfacecare products-----*/
+.menfacecare-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/cover%20men.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.menfacecare{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.menfacecare-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menfacecare-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menfacecare-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menfacecare-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menfacecare1 products--------*/
+.menfacecare1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menfacecare1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menfacecare1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menfacecare1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menfacecare1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menfacecare2  products--------*/
+.menfacecare2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menfacecare2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menfacecare2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menfacecare2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menfacecare2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menfacecare3 products--------*/
+.menfacecare3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menfacecare3-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menfacecare3-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menfacecare3-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menfacecare3-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------menaccessories perfume-----*/
+.menaccessories-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/men%20accessories%20cover.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.menaccessories{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.menaccessories-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menaccessories-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menaccessories-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menaccessories-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menaccessories1  products--------*/
+.menaccessories1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menaccessories1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menaccessories1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menaccessories1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menaccessories1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menaccessories2  products--------*/
+.menaccessories2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menaccessories2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menaccessories2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menaccessories2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menaccessories2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------menhaircare perfume-----*/
+.menhaircare-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/men%20hair%20care%20cover%202.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.menhaircare{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.menhaircare-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menhaircare-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menhaircare-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menhaircare-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menhaircare1  products--------*/
+.menhaircare1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menhaircare1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menhaircare1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menhaircare1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menhaircare1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------menhaircare2  products--------*/
+.menhaircare2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.menhaircare2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.menhaircare2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.menhaircare2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.menhaircare2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------kidsbodycare -----*/
+.kidsbodycare-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/kids%20body%20care%20cover.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.kidsbodycare{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.kidsbodycare-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.kidsbodycare-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.kidsbodycare-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.kidsbodycare-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------kidsbodycare1  products--------*/
+.kidsbodycare1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.kidsbodycare1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.kidsbodycare1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.kidsbodycare1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.kidsbodycare1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------kidsbodycare2  products--------*/
+.kidsbodycare2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.kidsbodycare2-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.kidsbodycare2-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.kidsbodycare2-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.kidsbodycare2-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------kidshealthydiet -----*/
+.kidshealthydiet-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/kids%20healthy%20diet%20cover.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.kidshealthydiet{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.kidshealthydiet-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.kidshealthydiet-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.kidshealthydiet-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.kidshealthydiet-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------kidsfacecare -----*/
+.kidsfacecare-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/kids%20face%20care%20cover.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.kidsfacecare{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.kidsfacecare-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.kidsfacecare-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.kidsfacecare-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.kidsfacecare-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-----------kidsfacecare1  products--------*/
+.kidsfacecare1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.kidsfacecare1-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.kidsfacecare1-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.kidsfacecare1-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.kidsfacecare1-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/*-------kidshaircare -----*/
+.kidshaircare-header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(images/kids%20hair%20care%20cover.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.kidshaircare{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.kidshaircare-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.kidshaircare-col img{
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 50px;
+}
+.kidshaircare-col p{
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+.kidshaircare-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
